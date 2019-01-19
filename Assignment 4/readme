@@ -3,6 +3,9 @@ Wanneer deze error verschijnt: Error: <circle> attribute r: Expected length, "Na
 komt dit waarschijnlijk omdat er een fout in de scv file zit met de data. Deze fout kruipt er telkens opnieuw in bij het
 heropstarten van het project. Om deze fout weg te werken dient men elke ";" in de csv file te vervangen door een ",".
 
+!!! LINK WEBSITE !!!
+Via deze link kan u surfen naar de website waarop deze taak is: http://dtsl.ehb.be/~amber.sannen/d3/
+
 Taak 4 - Top 10 geboren jongensnamen van 2000 tot 2017
 
 UITLEG
