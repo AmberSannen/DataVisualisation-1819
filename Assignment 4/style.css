@@ -1,0 +1,25 @@
+body {
+  background-color: #e7e4e6;
+}
+
+#decade,
+#combine {
+  font-family: 'Poppins', sans-serif;
+  border-style: none;
+  padding: 10px 10px;
+  border-radius: 5px;
+  background-color: #786d75;
+  color: white;
+}
+
+#decade:hover,
+#combine:hover {
+  background-color: white;
+  color: #786d75;
+}
+
+h1 {
+  font-family: 'Coiny', cursive;
+  text-align: left;
+  color: #786d75;
+}
