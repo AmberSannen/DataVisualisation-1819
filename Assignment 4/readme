@@ -1,0 +1,23 @@
+!!! BELANGRIJK !!!
+Wanneer deze error verschijnt: Error: <circle> attribute r: Expected length, "NaN".
+komt dit waarschijnlijk omdat er een fout in de scv file zit met de data. Deze fout kruipt er telkens opnieuw in bij het
+heropstarten van het project. Om deze fout weg te werken dient men elke ";" in de csv file te vervangen door een ",".
+
+Taak 4 - Top 10 geboren jongensnamen van 2000 tot 2017
+
+UITLEG
+Via deze website krijg je vanaf 2000 tot 2017 de top 10 namen van jongens te zien die in die jaren geboren zijn.
+De data is interactief op te delen, zo kan je de namen vanaf 2000 splitsen van de namen vanaf 2010.
+
+PROCES
+Ik had hiervoor nog nooit met D3 gewerkt, het was dus even ontdekken wat dit inhield. Ik volgde via Lynda.com een cursus 
+en ging daarna aan de slag via een goede tutorial die ik had gevonden. Na wat opzoekwerk kwam ik bij data terecht over de 
+geborenen en hun namen per jaar. 
+
+ASPECTEN
+Intend
+  - A1. Exploratory
+Media
+  - B. Interactive
+Appearance
+  - Ax. D3
