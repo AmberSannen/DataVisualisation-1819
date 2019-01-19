@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ndbx formatVersion="21" type="file" uuid="678edb35-053d-46ed-ac89-f64a7246e702">
+    <property name="canvasHeight" value="1400"/>
+    <property name="canvasWidth" value="2000"/>
+    <property name="canvasX" value="175"/>
+    <property name="canvasY" value="80"/>
+    <node name="root" prototype="core.network" renderedChild="colorize1">
+        <node name="colorize1" position="17.00,16.00" prototype="corevector.colorize">
+            <port name="fill" type="color" value="#5b0049ff"/>
+        </node>
+        <node name="combine1" position="11.00,14.00" prototype="list.combine"/>
+        <node name="count1" position="5.00,5.00" prototype="list.count"/>
+        <node name="filter_data1" position="6.00,-2.00" prototype="data.filter_data">
+            <port name="key" type="string" value="Year"/>
+        </node>
+        <node name="frame1" position="10.00,-2.00" prototype="core.frame"/>
+        <node name="import_csv1" position="3.00,-3.00" prototype="data.import_csv">
+            <port name="file" type="string" value="songsperyear.csv"/>
+        </node>
+        <node name="lookup1" position="3.00,3.00" prototype="data.lookup">
+            <port name="key" type="string" value="Cause"/>
+        </node>
+        <node name="lookup2" position="11.00,3.00" prototype="data.lookup">
+            <port name="key" type="string" value="Year"/>
+        </node>
+        <node name="multiply1" position="6.00,7.00" prototype="math.multiply">
+            <port name="value2" type="float" value="35.0"/>
+        </node>
+        <node name="range1" position="6.00,6.00" prototype="math.range"/>
+        <node name="rotate1" position="5.00,10.00" prototype="corevector.rotate">
+            <port name="origin" type="point" value="-174.00,-9.00"/>
+        </node>
+        <node name="slice1" position="7.00,0.00" prototype="list.slice"/>
+        <node name="sub_string1" position="11.00,5.00" prototype="string.sub_string"/>
+        <node name="textpath1" position="2.00,9.00" prototype="corevector.textpath">
+            <port name="font_name" type="string" value="TeluguMN"/>
+            <port name="font_size" type="float" value="19.0"/>
+            <port name="position" type="point" value="207.00,0.00"/>
+        </node>
+        <node name="textpath2" position="15.00,10.00" prototype="corevector.textpath">
+            <port name="font_name" type="string" value="Zapfino"/>
+            <port name="font_size" type="float" value="32.0"/>
+            <port name="position" type="point" value="-127.00,25.00"/>
+        </node>
+        <node name="textpath3" position="11.00,9.00" prototype="corevector.textpath">
+            <port name="text" type="string" value="Top ten songs of each year"/>
+            <port name="font_name" type="string" value="TeluguMN"/>
+            <port name="font_size" type="float" value="56.0"/>
+            <port name="align" type="string" value="RIGHT"/>
+            <port name="position" type="point" value="214.00,-644.00"/>
+        </node>
+        <node name="translate2" position="16.00,12.00" prototype="corevector.translate">
+            <port name="translate" type="point" value="-64.00,0.00"/>
+        </node>
+        <conn input="count1.list" output="lookup1"/>
+        <conn input="range1.end" output="count1"/>
+        <conn input="multiply1.value1" output="range1"/>
+        <conn input="textpath1.text" output="lookup1"/>
+        <conn input="rotate1.shape" output="textpath1"/>
+        <conn input="rotate1.angle" output="multiply1"/>
+        <conn input="translate2.shape" output="textpath2"/>
+        <conn input="combine1.list2" output="translate2"/>
+        <conn input="combine1.list1" output="rotate1"/>
+        <conn input="sub_string1.string" output="lookup2"/>
+        <conn input="textpath2.text" output="sub_string1"/>
+        <conn input="filter_data1.data" output="import_csv1"/>
+        <conn input="slice1.list" output="filter_data1"/>
+        <conn input="lookup1.list" output="slice1"/>
+        <conn input="lookup2.list" output="slice1"/>
+        <conn input="filter_data1.value" output="frame1"/>
+        <conn input="combine1.list3" output="textpath3"/>
+        <conn input="colorize1.shape" output="combine1"/>
+    </node>
+</ndbx>
